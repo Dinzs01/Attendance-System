@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Attendance Rules</title>
+  <title>Face Registration</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h2>Attendance Rules</h2>
+<h2>Face Registration</h2>
 
-<form>
+<p id="studentInfo"></p>
 
-  <h3>Normal Attendance</h3>
-  From <input type="time" id="normalFrom">
-  To <input type="time" id="normalTo">
-  Percentage:
-  <input type="number" id="normalPercent" value="100"> %
-  <br><br>
+<button onclick="registerFace()">📸 Capture Face</button>
 
-  <h3>Late Attendance</h3>
-  From <input type="time" id="lateFrom">
-  To <input type="time" id="lateTo">
-  Percentage:
-  <input type="number" id="latePercent" value="50"> %
-  <br><br>
+<p id="status"></p>
 
-  <h3>Very Late Attendance</h3>
-  After <input type="time" id="veryLateAfter">
-  Percentage:
-  <input type="number" id="veryLatePercent" value="1"> %
-  <br><br>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const studentId = params.get("studentId");
 
-  <button type="submit">Save Rules</button>
+  document.getElementById("studentInfo").innerText =
+    "Student ID: " + studentId;
 
-</form>
+  function registerFace() {
+    document.getElementById("status").innerText =
+      "Face registered successfully for " + studentId;
+  }
+</script>
 
 <br>
-<a href="dashboard.html">⬅ Back to Dashboard</a>
-
-<p style="font-size:12px; color:gray;">
-  * Rules can be dynamically stored and applied during verification.
-</p>
+<a href="login.html">⬅ Back</a>
 
 </body>
 </html>
+
+
