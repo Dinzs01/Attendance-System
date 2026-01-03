@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin - Student Registration</title>
+
+  <!-- QR Code Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+  <!-- Optional basic styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    button {
+      padding: 8px 14px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #qrcode {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Admin Panel</h2>
+
+  <!-- Student info loaded from URL -->
+  <p id="infoText"></p>
+
+  <!-- Generate QR button -->
+  <button onclick="generateQR()">📷 Generate QR for Mobile Capture</button>
+
+  <h3>Scan this QR with mobile</h3>
+
+  <!-- QR code will appear here -->
+  <div id="qrcode"></div>
+
+  <!-- IMPORTANT: only external JS file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
