@@ -18,7 +18,7 @@ function generateQR() {
   }
 
   // LOCAL TEST URL (CHANGE IP IF USING MOBILE)
-  const baseURL = "http://localhost:5500";
+  const baseURL = "https://attendance-system-f89d2.web.app";
 
   const qrURL =
     baseURL +
@@ -37,3 +37,4 @@ function generateQR() {
     height: 220
   });
 }
+
